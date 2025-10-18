@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora Simples</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      width: 200px;
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧮 Calculadora Simples</h1>
+  <input id="num1" type="number" placeholder="Número 1">
+  <input id="num2" type="number" placeholder="Número 2">
+  <div>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+  </div>
+  <h2 id="resultado">Resultado: </h2>
+
+  <script>
+    function calcular(op) {
+      let n1 = parseFloat(document.getElementById('num1').value);
+      let n2 = parseFloat(document.getElementById('num2').value);
+      let res;
+      switch(op) {
+        case '+': res = n1 + n2; break;
+        case '-': res = n1 - n2; break;
+        case '*': res = n1 * n2; break;
+        case '/': res = n2 !== 0 ? n1 / n2 : 'Erro (divisão por 0)';
+      }
+      document.getElementById('resultado').innerText = 'Resultado: ' + res;
+    }
+  </script>
+</body>
+</html>
+Desça até o final da página e clique no botão Commit changes (verde).
+
+Pronto ✅ — o arquivo vai aparecer no seu repositório.
+
+🟢 PASSO 3 — Criar o README.md (documentação do projeto)
+Clique de novo em Add file → Create new file.
+
+Nomeie o arquivo assim:
+
+Copiar código
+README.md
+Cole este texto:
+
+md
+Copiar código
+# 🧮 Calculadora Simples
+
+Este projeto foi criado como parte da atividade **Criação de Repositório com Versionamento** do CEUB.
+
+## 🚀 Tecnologias utilizadas
+- HTML
+- CSS
+- JavaScript
+- GitHub
+
+## 💡 Funcionalidades
+- Soma, subtração, multiplicação e divisão
+- Interface simples e responsiva
+
+## 🔗 Link do repositório
+[Meu repositório no GitHub](https://github.com/pauloroberto64744858/Calculadora)
